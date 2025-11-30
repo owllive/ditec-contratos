@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tela de Caixa de Entrada (Logs e Notificações)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#197fe6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden text-slate-800 dark:text-slate-200">
+<main class="flex-1 pb-24">
+<div class="flex flex-col gap-4 bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center h-12 justify-between">
+<button class="flex size-12 items-center justify-start">
+<span class="material-symbols-outlined text-slate-800 dark:text-slate-200">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold text-slate-900 dark:text-slate-50">Caixa de Entrada</h1>
+<div class="flex size-12 items-center justify-end">
+<button class="flex size-12 items-center justify-end">
+<span class="material-symbols-outlined text-slate-800 dark:text-slate-200">search</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h2 class="text-slate-900 dark:text-slate-50 text-base font-bold">Alterações de Configuração</h2>
+<a class="text-primary text-sm font-bold" href="#">Ver tudo</a>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-blue-100 dark:bg-blue-900/50">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400">person</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-50 text-sm font-medium">Permissão de <strong>Beatriz Costa</strong> alterada para 'Editor'.</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Por: Admin - 1h atrás</p>
+</div>
+</div>
+<div class="flex items-start gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-blue-100 dark:bg-blue-900/50">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400">group_add</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-50 text-sm font-medium">Novo usuário <strong>Fernando Lima</strong> foi convidado.</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Por: Admin - 3h atrás</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h2 class="text-slate-900 dark:text-slate-50 text-base font-bold">Logs de Erros e Bugs</h2>
+<a class="text-primary text-sm font-bold" href="#">Ver tudo</a>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-4 rounded-xl border border-rose-200 dark:border-rose-900/50 bg-rose-50/50 dark:bg-rose-900/20 p-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-rose-100 dark:bg-rose-900/50">
+<span class="material-symbols-outlined text-rose-600 dark:text-rose-400">bug_report</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-50 text-sm font-medium">Falha ao gerar relatório de contrato #12345.</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Erro 500 - 15min atrás</p>
+</div>
+</div>
+<div class="flex items-start gap-4 rounded-xl border border-rose-200 dark:border-rose-900/50 bg-rose-50/50 dark:bg-rose-900/20 p-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-rose-100 dark:bg-rose-900/50">
+<span class="material-symbols-outlined text-rose-600 dark:text-rose-400">error</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-50 text-sm font-medium">API de upload de documentos indisponível.</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Timeout - 45min atrás</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h2 class="text-slate-900 dark:text-slate-50 text-base font-bold">Outros Pedidos</h2>
+<a class="text-primary text-sm font-bold" href="#">Ver tudo</a>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-slate-100 dark:bg-slate-800">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">description</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-50 text-sm font-medium">Pedido de acesso ao contrato #67890 por <strong>Carlos Almeida</strong>.</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Ontem, 17:30</p>
+</div>
+<div class="flex gap-2 items-center">
+<button class="flex items-center justify-center size-8 rounded-full bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300">
+<span class="material-symbols-outlined" style="font-size: 20px;">check</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400">
+<span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0">
+<div class="flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal tracking-[0.015em]">Início</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal tracking-[0.015em]">Contratos</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+<p class="text-primary text-xs font-medium leading-normal tracking-[0.015em]">Admin</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal tracking-[0.015em]">Perfil</p>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>
