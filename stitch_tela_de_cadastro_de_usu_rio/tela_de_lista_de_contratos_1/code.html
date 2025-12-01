@@ -50,7 +50,7 @@
     }
   </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200" data-page="lista-contratos">
 <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-3 justify-between sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
 <div class="flex size-12 shrink-0 items-center justify-start">
@@ -67,6 +67,20 @@
 </header>
 <main class="flex-1 pb-24">
 <div class="p-4 space-y-6">
+<section class="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="flex items-center justify-between gap-3">
+<div>
+<h2 class="text-lg font-semibold text-gray-900 dark:text-white">Contratos (API)</h2>
+<p class="text-sm text-gray-500">Atualiza a lista usando a rota /api/contratos/visao-geral.</p>
+</div>
+<button type="button" data-reload-contracts class="inline-flex items-center gap-2 rounded-lg bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110">
+<span class="material-symbols-outlined text-base">refresh</span>
+Recarregar
+</button>
+</div>
+<p data-contracts-error class="mt-2 text-sm text-red-600"></p>
+<div data-contracts-list class="mt-4 grid grid-cols-1 gap-4"></div>
+</section>
 <section class="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-sm">
 <div class="flex items-center justify-between mb-3">
 <h2 class="text-xl font-bold text-gray-900 dark:text-white">Contrato #003</h2>
@@ -170,4 +184,5 @@
 </button>
 </div>
 </div>
+<script src="../integration.js"></script>
 </body></html>
