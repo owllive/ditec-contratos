@@ -67,17 +67,6 @@ npm start
 - `POST /api/contratos/:id/pesquisa-precos` – registra fontes de preço e recalcula `valorEstimado` e `diferencaPercentual`.
 - `GET /api/contratos/visao-geral` – visão para gestor com dias restantes, alerta e ordenação pelo menor `valorGlobal`.
 
-## Interface Stitch conectada à API
-
-Os protótipos exportados do Stitch foram integrados via JavaScript simples e podem ser acessados como páginas estáticas servidas pelo Express em `http://localhost:3000/ui/index.html`:
-
-- **Menu**: `stitch_tela_de_cadastro_de_usu_rio/index.html`
-- **Cadastro de contrato** (envio para `POST /api/contratos`): `stitch_tela_de_cadastro_de_usu_rio/tela_de_adicionar_novo_contrato/code.html`
-- **Lista / visão geral** (carrega `GET /api/contratos/visao-geral`): `stitch_tela_de_cadastro_de_usu_rio/tela_de_lista_de_contratos_1/code.html`
-- **Pesquisa de preços** (envia para `POST /api/contratos/:id/pesquisa-precos`): `stitch_tela_de_cadastro_de_usu_rio/tela_de_balanço_de_preços/code.html`
-
-Abra esses arquivos diretamente ou via servidor (`/ui/...`) para testar a API usando as telas originais.
-
 ## Rotina de atualização de status (alerta de 3 meses)
 Atualiza `statusContrato` automaticamente com base em `dataFim` (ATIVO / EM_ALERTA / VENCIDO):
 
