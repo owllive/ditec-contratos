@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão de Contratos - UI Stitch</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Public Sans', sans-serif; }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <div class="mx-auto flex min-h-screen max-w-4xl flex-col gap-6 px-4 py-10">
+      <header class="flex items-center justify-between rounded-2xl bg-white px-6 py-4 shadow-sm">
+        <div>
+          <p class="text-sm font-semibold text-slate-600">Gestão de Contratos</p>
+          <h1 class="text-2xl font-bold">Protótipo Stitch + API</h1>
+        </div>
+        <div class="flex items-center gap-3 text-sm text-slate-500">
+          <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+          API disponível em <code>/api/contratos</code>
+        </div>
+      </header>
+
+      <section class="grid gap-4 rounded-2xl bg-white p-6 shadow-sm sm:grid-cols-2">
+        <article class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4">
+          <h2 class="text-lg font-semibold">Nova contratação</h2>
+          <p class="text-sm text-slate-600">Abrir a tela do Stitch para cadastrar um contrato e enviá-lo à API.</p>
+          <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110" href="./tela_de_adicionar_novo_contrato/code.html" target="_blank">Ir para o formulário</a>
+        </article>
+        <article class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4">
+          <h2 class="text-lg font-semibold">Lista e visão geral</h2>
+          <p class="text-sm text-slate-600">Visualizar os contratos diretamente da rota de visão geral da API.</p>
+          <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110" href="./tela_de_lista_de_contratos_1/code.html" target="_blank">Abrir lista</a>
+        </article>
+        <article class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4">
+          <h2 class="text-lg font-semibold">Pesquisa de preços</h2>
+          <p class="text-sm text-slate-600">Registrar fontes de preços e atualizar o valor estimado do contrato.</p>
+          <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110" href="./tela_de_balanço_de_preços/code.html" target="_blank">Abrir pesquisa</a>
+        </article>
+        <article class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4">
+          <h2 class="text-lg font-semibold">Documentação</h2>
+          <p class="text-sm text-slate-600">Como executar a API, rodar migrations e usar os endpoints principais.</p>
+          <a class="inline-flex items-center justify-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110" href="../README.md" target="_blank">Abrir README</a>
+        </article>
+      </section>
+
+      <p class="text-center text-xs text-slate-500">As páginas acima reutilizam os arquivos exportados do Stitch com integração via fetch para a API.</p>
+    </div>
+  </body>
+</html>
