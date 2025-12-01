@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: ditec_contratos_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ditec_contratos
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+  api:
+    build: .
+    container_name: ditec_contratos_api
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/ditec_contratos?schema=public
+      PORT: 3000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+volumes:
+  db_data:
